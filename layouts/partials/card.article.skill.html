@@ -1,11 +1,11 @@
 <div class="mdui-col-xs-6">
-    <div class="mdgo-card  mdgo-card-border mdgo-height-list mdgo-crad-radis mdui-typo">
+    <div class="mdgo-card  mdgo-card-border mdgo-height-list mdgo-card-radius mdui-typo">
         <div class="mdui-valign mdui-m-b-1">
             <i class="mdui-icon material-icons">collections_bookmark</i>
             <span class="mdgo-header-text">技术文章</span>
         </div>
         <ul class="mdui-text-truncate">
-            {{ range first 6 (where site.RegularPages "Section" "technology") }}
+            {{ range first 6 (where site.RegularPages "Section" "skill") }}
             <li>
                 <a href="{{.Permalink}}">{{.Title}}</a>
             </li>

@@ -1,70 +1,19 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{.Title}} - Debug客栈</title>
-    <link href="{{ .Site.BaseURL }}css/mdui.min.css" rel="stylesheet">
-</head>
+{{ partial "head.html" . }}
 
 <body class="mdui-appbar-with-toolbar">
     <!-- header -->
-    <div class="mdui-appbar mdui-appbar-fixed">
-        <div class="mdui-toolbar mdui-color-grey-900">
-            <a href="javascript:;" class="mdui-btn mdui-btn-icon">
-                <i class="mdui-icon material-icons">fingerprint</i>
-            </a>
-            <a href="javascript:;" class="mdui-typo-headline">Debug客栈</a>
-            <div class="mdui-toolbar-spacer"></div>
-            <a href=""></a>
-            <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>
-            <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
-            <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">more_vert</i></a>
-        </div>
-    </div>
-
+    {{ partial "header.html" . }}
     <!-- content -->
     <div class="mdui-container">
         <div class="mdui-row">
-            <!-- left-content -->
-            <div class="mdui-col-xs-3">
-                <div class="mdui-center" style="margin:35px 35px">
-                    <img src="{{ .Site.BaseURL }}img/logo.png" class="mdui-img-fluid mdui-img-circle mdui-hoverable"
-                        style="border: 1px solid #e9e9e9" alt="logo">
-                    <h2>Meng小羽</h2>
-                    <h4>做一个爱分享的程序猿</h4>
-                </div>
-
-
-            </div>
-            <!-- right-content -->
-            <div class="mdui-col-xs-9">
-                <div class="mdui-tab mdui-shadow-0" mdui-tab>
-                    <a href="#example3-tab1" class="mdui-ripple mdui-ripple-white">web</a>
-                    <a href="#example3-tab1" class="mdui-ripple mdui-ripple-white">shopping</a>
-                    <a href="#example3-tab1" class="mdui-ripple mdui-ripple-white">videos</a>
-                </div>
-                <div id="post" class="post">
-                    <article>
-                        <header>
-                            <h1 class="post-title">{{ .Title }}</h1>
-                        </header>
-                        {{.Content}}
-                    </article>
-                </div>
-            </div>
+            <!-- left-sidebar -->
+            {{ partial "sidebar.left.html" . }}
+            <!-- center-content -->
+            {{ partial "center.content.html" .}}
         </div>
-
-
-
-
     </div>
+
     <!-- footer -->
-
+    {{ partial "analytics.html" . }}
+    {{ partial "footer.html" . }}
 </body>
-
-</html>
-
-<script src="{{ .Site.BaseURL }}js/mdui.min.js"></script>

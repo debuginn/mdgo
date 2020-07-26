@@ -1,0 +1,69 @@
+<div class="mdui-col-xs-6">
+    <div class="mdui-typo">
+        <div>
+            <h1 id="title">
+                {{ .Title }}
+            </h1>
+        </div>
+        <div>
+            <div class="mdui-chip">
+                <span class="mdui-chip-icon mdui-color-green">
+                    <i class="mdui-icon material-icons">date_range</i>
+                </span>
+                <span class="mdui-chip-title">
+                    {{ .Date.Format "Mon Jan 2, 2006" }}
+                </span>
+            </div>
+            <div class="mdui-chip">
+                <span class="mdui-chip-icon mdui-color-blue">
+                    <i class="mdui-icon material-icons">confirmation_number</i>
+                </span>
+                <span class="mdui-chip-title">
+                    {{ .WordCount }} Words
+                </span>
+            </div>
+            <div class="mdui-chip">
+                <span class="mdui-chip-icon mdui-color-blue">
+                    <i class="mdui-icon material-icons">chrome_reader_mode</i>
+                </span>
+                <span class="mdui-chip-title">
+                    大约阅读 {{ .ReadingTime }} 分钟
+                </span>
+            </div>
+
+        </div>
+        <div class="mdgo-content">
+            {{ .Content }}
+        </div>
+    </div>
+    <div class="mdui-container">
+        <div class="mdui-row">
+
+            {{ with .PrevInSection }}
+            <a href="{{.Permalink}}"
+                class="mdui-ripple mdui-color-theme mdui-col-xs-2 mdui-col-sm-6 doc-footer-nav-left">
+                <div class="doc-footer-nav-text">
+                    <i class="mdui-icon material-icons">arrow_back</i>
+                    <span class="doc-footer-nav-direction mdui-hidden-xs-down">Previous</span>
+                    <div class="doc-footer-nav-chapter mdui-hidden-xs-down">
+                        {{.Title}}
+                    </div>
+                </div>
+            </a>
+            {{ end }}
+            {{ with .NextInSection }}
+            <a href="{{.Permalink}}"
+                class="mdui-ripple mdui-color-theme mdui-col-xs-10 mdui-col-sm-6 doc-footer-nav-right">
+                <div class="doc-footer-nav-text">
+                    <i class="mdui-icon material-icons">arrow_forward</i>
+                    <span class="doc-footer-nav-direction">Next</span>
+                    <div class="doc-footer-nav-chapter">{{.Title}}</div>
+                </div>
+            </a>
+            {{ end }}
+
+
+
+        </div>
+    </div>
+</div>

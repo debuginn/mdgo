@@ -8,8 +8,8 @@
 /* mdgo card design */
 .mdgo-card{margin: 5px 0px; padding: 10px 20px;}
 .mdgo-card-mini{margin: 5px 0px; padding: 12px; line-height: 100%;}
+.mdgo-card-radius{border-radius: 5px;}
 .mdgo-card-border{border: 1px solid rgb(212, 212, 212);}
-.mdgo-crad-radis{border-radius: 5px;}
 
 /* mdgo clip design */
 .mdgo-clip{margin: 5px;float: left;}
@@ -24,3 +24,5 @@
 .mdgo-height-list{height: 100%;}
 
 .mdgo-header-text{font-size: 20px;padding-left: 10px;}
+
+.mdgo-content{padding: 10px;}

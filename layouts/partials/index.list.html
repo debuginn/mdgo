@@ -1,0 +1,16 @@
+<div class="mdui-col-xs-6 mdui-typo">
+    <div class="mdui-m-t-2">
+        <header>
+            <h1>{{.Title}} 文章归档</h1>
+        </header>
+        <hr>
+        <ul class="mdui-text-truncate">
+            {{ range .Pages }}
+            <li>
+                <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} {{.Title}}</a>
+            </li>
+            {{ end }}
+        </ul>
+
+    </div>
+</div>

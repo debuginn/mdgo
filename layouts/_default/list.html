@@ -1,20 +1,23 @@
-<!DOCTYPE html>
-<html lang="zh">
+{{ partial "head.html" . }}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>列表页面</title>
-</head>
-
-<body>
-    <!-- {{ with .Site.GetPage "/post" }}<a href="{{.Permalink}}">{{ .Title }}</a>{{ end }} -->
-    {{  range .Pages }}
-    <div>
-        <a href="{{.Permalink}}">{{.Title}}</a>
+<body class="mdui-appbar-with-toolbar">
+    <!-- header -->
+    {{ partial "header.html" . }}
+    <!-- content -->
+    <div class="mdui-container">
+        <div class="mdui-row">
+            <!-- left-sidebar -->
+            {{ partial "sidebar.left.html" . }}
+            <!-- center-content -->
+            {{ partial "index.list.html" . }}
+            <!-- right-sidebar -->
+            {{ partial "sidebar.right.html" . }}
+        </div>
     </div>
-    {{  end  }}
+
+    <!-- footer -->
+    {{ partial "analytics.html" . }}
+    {{ partial "footer.html" . }}
 </body>
 
 </html>

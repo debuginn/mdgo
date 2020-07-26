@@ -1,11 +1,11 @@
 <div class="mdui-col-xs-6">
-    <div class="mdgo-card  mdgo-card-border mdgo-height-list mdgo-crad-radis mdui-typo">
+    <div class="mdgo-card  mdgo-card-border mdgo-height-list mdgo-card-radius mdui-typo">
         <div class="mdui-valign mdui-m-b-1">
             <i class="mdui-icon material-icons">free_breakfast</i>
-            <span class="mdgo-header-text">技术杂谈</span>
+            <span class="mdgo-header-text">科技杂谈</span>
         </div>
         <ul class="mdui-text-truncate">
-            {{ range first 6 (where site.RegularPages "Section" "thinking") }}
+            {{ range first 6 (where site.RegularPages "Section" "think") }}
             <li>
                 <a href="{{.Permalink}}">{{ .Title }}</a>
             </li>
