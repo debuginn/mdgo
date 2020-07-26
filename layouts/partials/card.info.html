@@ -1,0 +1,26 @@
+<div class="mdui-col-xs-6">
+    <div class="mdgo-card mdgo-card-padding mdgo-card-border mdgo-height-default mdgo-crad-radis">
+        <div class="mdui-typo">
+            {{ .Site.Params.Info | safeHTML }}
+        </div>
+        <hr class="mdui-color-black-secondary">
+        <div>
+            <a href="https://www.github.com/{{ .Site.Params.UserGitHub }}" target="_blank">
+                <img src='https://img.shields.io/badge/dynamic/json?logo=github&label=GitHub+Followers&labelColor=282c34&style=flat-square&color=181717&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dgithub%26queryKey%3D{{ .Site.Params.UserGitHub }}&longCache=true'
+                    class="mdgo-clip">
+            </a>
+            <a href="mailto://{{ .Site.Params.UserEmail }}" target="_blank">
+                <img class="mdgo-clip"
+                    src='https://img.shields.io/badge/-{{ .Site.Params.UserEmail }}-911318?style=flat-square&logo=Mail.RU&logoColor=white&labelColor=c14438'>
+            </a>
+            <a href="/" target="_blank">
+                <img class="mdgo-clip"
+                    src='https://img.shields.io/badge/-https://debuginn.cn-0e83cd?style=flat-square&logo=Blogger&logoColor=fff'>
+            </a>
+            <a href="https://t.me/{{ .Site.Params.UserTelegram }}" target="_blank">
+                <img class="mdgo-clip"
+                    src='https://img.shields.io/badge/-t.me/{{ .Site.Params.UserTelegram }}-3db6f1?style=flat-square&logo=Telegram&logoColor=2ca5e0'>
+            </a>
+        </div>
+    </div>
+</div>
